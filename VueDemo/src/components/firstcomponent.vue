@@ -1,7 +1,7 @@
 <template>
   <div id="firstcomponent">
     <div>
-      <h1>I am a title</h1>
+      <h1 class="headerA">I am a title</h1>
       <p>{{message}}</p>
       <router-link :to="{ name: 'HelloWorld', params: {} }">HelloWorldPage</router-link>
     </div>
@@ -19,5 +19,10 @@ export default {
 </script>
 
 <style>
-
+  .headerA {
+    margin: auto;
+    background: #1e84e2;
+    text-decoration-color: ##eee3df;
+    font: 16px;
+  }
 </style>

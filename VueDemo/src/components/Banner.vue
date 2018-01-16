@@ -18,8 +18,15 @@
         pagination: '.swiper-pagination',
         paginationClickable: true,
         loop: true,
-        speed: 600,
-        autoplay: 4000,
+        speed: 400,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false,
+        preventClicksPropagation: false,
+        on: {
+          click: function () {
+            console.log(this.clickedIndex)
+          }
+        },
         onTouchEnd: function () {
           swiper.startAutoplay()
         }
@@ -31,7 +38,7 @@
 <style lang="less">
   .swiper-container {
     width: 100%;
-    height: 12rem;
+    height: 13rem;
     .swiper-wrapper {
       width: 100%;
       height: 100%;
@@ -47,10 +54,10 @@
         }
       }
     .swiper-pagination-bullet {
-      width:0.833rem;
+      width: 0.833rem;
       height: 0.833rem;
       display: inline-block;
-      background: #7c5e53;
+      background: #8d6a91;
     }
   }
 </style>
