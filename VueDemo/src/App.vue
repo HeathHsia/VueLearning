@@ -2,14 +2,32 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <!-- <router-link :to="{ name: 'firstcomponent'}">firstcomponent Page</router-link> -->
+    <div>
+      <p>
+        ask a question
+        <input v-model="question"></input>
+        <p v-if="seen">你能看见我吗</p>
+      </p>
+      <p>{{answer}}</p>
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app',
+    data () {
+      return {
+        seen: true,
+        question: '',
+        answer: 'I cant answer you until you ask a question'
+      }
+    },
+    methods: {
+
+    }
+  }
 </script>
 
 <style scoped lang="less">

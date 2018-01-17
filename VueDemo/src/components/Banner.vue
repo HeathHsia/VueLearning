@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  // 引入Swiper
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   export default {
@@ -21,7 +22,6 @@
         speed: 400,
         autoplay: 3000,
         autoplayDisableOnInteraction: false,
-        preventClicksPropagation: false,
         on: {
           click: function () {
             console.log(this.clickedIndex)
